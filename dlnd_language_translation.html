@@ -8451,15 +8451,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11233,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11676,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11732,14 +11732,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11927,7 +11927,7 @@ les états-unis est parfois occupé en janvier , et il est parfois chaud en nove
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">source_sentences</span><span class="p">)):</span>
         <span class="n">source_sentence</span> <span class="o">=</span> <span class="n">source_sentences</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="n">target_sentence</span> <span class="o">=</span> <span class="n">target_sentences</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">source_words</span> <span class="o">=</span> <span class="n">source_sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>    
+        <span class="n">source_words</span> <span class="o">=</span> <span class="n">source_sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
         <span class="n">target_words</span> <span class="o">=</span> <span class="n">target_sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
         <span class="n">target_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&lt;EOS&gt;&#39;</span><span class="p">)</span>
         <span class="n">source_id_text</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">source_vocab_to_int</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">source_words</span><span class="p">])</span>
@@ -12128,11 +12128,11 @@ Default GPU Device: /gpu:0
 
     <span class="n">learning_rate</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">)</span>
     <span class="n">keep_prob</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;keep_prob&#39;</span><span class="p">)</span>
-    
+
     <span class="n">target_sequence_length</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;target_sequence_length&#39;</span><span class="p">)</span>
     <span class="n">max_target_len</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_max</span><span class="p">(</span><span class="n">target_sequence_length</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;max_target_len&#39;</span><span class="p">)</span>
     <span class="n">source_sequence_length</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;source_sequence_length&#39;</span><span class="p">)</span>
-    
+
     <span class="k">return</span> <span class="n">input_</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">learning_rate</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">,</span> <span class="n">target_sequence_length</span><span class="p">,</span> <span class="n">max_target_len</span><span class="p">,</span> <span class="n">source_sequence_length</span>
 
 <span class="c1"># TODO(kaneda): The call of assert_rank() cause warn message &quot;Object was never used&quot;.</span>
@@ -12190,7 +12190,7 @@ Tests Passed
 <span class="sd">    :param target_vocab_to_int: Dictionary to go from the target words to an id</span>
 <span class="sd">    :param batch_size: Batch Size</span>
 <span class="sd">    :return: Preprocessed target data</span>
-<span class="sd">    &quot;&quot;&quot;</span>    
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Remove the last word id from each batch </span>
     <span class="n">sliced</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">strided_slice</span><span class="p">(</span>
         <span class="n">target_data</span><span class="p">,</span>
@@ -12246,14 +12246,14 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">imp</span> <span class="k">import</span> <span class="n">reload</span>
 <span class="n">reload</span><span class="p">(</span><span class="n">tests</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">encoding_layer</span><span class="p">(</span><span class="n">rnn_inputs</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">,</span> 
-                   <span class="n">source_sequence_length</span><span class="p">,</span> <span class="n">source_vocab_size</span><span class="p">,</span> 
+<span class="k">def</span> <span class="nf">encoding_layer</span><span class="p">(</span><span class="n">rnn_inputs</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">,</span>
+                   <span class="n">source_sequence_length</span><span class="p">,</span> <span class="n">source_vocab_size</span><span class="p">,</span>
                    <span class="n">encoding_embedding_size</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create encoding layer</span>
@@ -12265,24 +12265,24 @@ Tests Passed
 <span class="sd">    :param source_vocab_size: vocabulary size of source data</span>
 <span class="sd">    :param encoding_embedding_size: embedding size of source data</span>
 <span class="sd">    :return: tuple (RNN output, RNN state)</span>
-<span class="sd">    &quot;&quot;&quot;</span>    
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">rnn_cell</span><span class="p">():</span>
         <span class="n">cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">LSTMCell</span><span class="p">(</span><span class="n">rnn_size</span><span class="p">)</span>
         <span class="c1"># , initializer=tf.random_uniform_initializer(-0.1, 0.1, seed=2)</span>
         <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">DropoutWrapper</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">output_keep_prob</span><span class="o">=</span><span class="n">keep_prob</span><span class="p">)</span>
-    
+
     <span class="n">cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">MultiRNNCell</span><span class="p">([</span><span class="n">rnn_cell</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">)],</span> <span class="n">state_is_tuple</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="n">embed_input</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">embed_sequence</span><span class="p">(</span>
         <span class="n">rnn_inputs</span><span class="p">,</span>
         <span class="n">vocab_size</span><span class="o">=</span><span class="n">source_vocab_size</span><span class="p">,</span>
-        <span class="n">embed_dim</span><span class="o">=</span><span class="n">encoding_embedding_size</span><span class="p">,</span>        
+        <span class="n">embed_dim</span><span class="o">=</span><span class="n">encoding_embedding_size</span><span class="p">,</span>
     <span class="p">)</span>
-    
+
     <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dynamic_rnn</span><span class="p">(</span>
         <span class="n">cell</span><span class="p">,</span>
-        <span class="n">embed_input</span><span class="p">,</span> 
-        <span class="n">sequence_length</span><span class="o">=</span><span class="n">source_sequence_length</span><span class="p">,</span> 
+        <span class="n">embed_input</span><span class="p">,</span>
+        <span class="n">sequence_length</span><span class="o">=</span><span class="n">source_sequence_length</span><span class="p">,</span>
         <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -12329,11 +12329,11 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decoding_layer_train</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">dec_cell</span><span class="p">,</span> <span class="n">dec_embed_input</span><span class="p">,</span> 
-                         <span class="n">target_sequence_length</span><span class="p">,</span> <span class="n">max_summary_length</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decoding_layer_train</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">dec_cell</span><span class="p">,</span> <span class="n">dec_embed_input</span><span class="p">,</span>
+                         <span class="n">target_sequence_length</span><span class="p">,</span> <span class="n">max_summary_length</span><span class="p">,</span>
                          <span class="n">output_layer</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a decoding layer for training</span>
@@ -12347,20 +12347,20 @@ Tests Passed
 <span class="sd">    :return: BasicDecoderOutput containing training logits and sample_id</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># QUESTION(kaneda): Do we need to use keep_prob here?</span>
-    
+
     <span class="c1"># Helper for the training process. Used by BasicDecoder to read inputs.</span>
     <span class="n">training_helper</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">seq2seq</span><span class="o">.</span><span class="n">TrainingHelper</span><span class="p">(</span>
         <span class="n">inputs</span><span class="o">=</span><span class="n">dec_embed_input</span><span class="p">,</span>
         <span class="n">sequence_length</span><span class="o">=</span><span class="n">target_sequence_length</span><span class="p">,</span>
         <span class="n">time_major</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-                
+
     <span class="c1"># Basic decoder</span>
     <span class="n">training_decoder</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">seq2seq</span><span class="o">.</span><span class="n">BasicDecoder</span><span class="p">(</span>
         <span class="n">dec_cell</span><span class="p">,</span>
         <span class="n">training_helper</span><span class="p">,</span>
         <span class="n">encoder_state</span><span class="p">,</span>
-        <span class="n">output_layer</span><span class="p">)</span> 
-        
+        <span class="n">output_layer</span><span class="p">)</span>
+
     <span class="c1"># Perform dynamic decoding using the decoder</span>
     <span class="n">training_decoder_output</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">seq2seq</span><span class="o">.</span><span class="n">dynamic_decode</span><span class="p">(</span>
         <span class="n">training_decoder</span><span class="p">,</span>
@@ -12414,7 +12414,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decoding_layer_infer</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">dec_cell</span><span class="p">,</span> <span class="n">dec_embeddings</span><span class="p">,</span> <span class="n">start_of_sequence_id</span><span class="p">,</span>
@@ -12436,7 +12436,7 @@ Tests Passed
 <span class="sd">    :return: BasicDecoderOutput containing inference logits and sample_id</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># QUESTION(kaneda): Do we need to use keep_prob here?</span>
-    
+
     <span class="c1"># Replicate &#39;&lt;GO&gt;&#39; for every sentense in the batch.</span>
     <span class="n">goConstant</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([</span><span class="n">start_of_sequence_id</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
     <span class="n">start_tokens</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">goConstant</span><span class="p">,</span> <span class="p">[</span><span class="n">batch_size</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;start_tokens&#39;</span><span class="p">)</span>
@@ -12453,13 +12453,13 @@ Tests Passed
         <span class="n">inference_helper</span><span class="p">,</span>
         <span class="n">encoder_state</span><span class="p">,</span>
         <span class="n">output_layer</span><span class="p">)</span>
-        
+
     <span class="c1"># Perform dynamic decoding using the decoder</span>
     <span class="n">inference_decoder_output</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">seq2seq</span><span class="o">.</span><span class="n">dynamic_decode</span><span class="p">(</span>
         <span class="n">inference_decoder</span><span class="p">,</span>
         <span class="n">impute_finished</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">maximum_iterations</span><span class="o">=</span><span class="n">max_target_sequence_length</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    
+
     <span class="k">return</span> <span class="n">inference_decoder_output</span>
 
 
@@ -12510,7 +12510,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decoding_layer</span><span class="p">(</span><span class="n">dec_input</span><span class="p">,</span> <span class="n">encoder_state</span><span class="p">,</span>
@@ -12534,17 +12534,16 @@ Tests Passed
 <span class="sd">    :return: Tuple of (Training BasicDecoderOutput, Inference BasicDecoderOutput)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Embed the target sequences</span>
-    <span class="n">target_vocab_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">target_vocab_to_int</span><span class="p">)</span>
     <span class="n">embedding</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_uniform</span><span class="p">([</span><span class="n">target_vocab_size</span><span class="p">,</span> <span class="n">decoding_embedding_size</span><span class="p">]))</span>
     <span class="n">embed_input</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">embedding_lookup</span><span class="p">(</span><span class="n">embedding</span><span class="p">,</span> <span class="n">dec_input</span><span class="p">)</span>
-    
+
     <span class="c1"># Construct the decoder LSTM cell (just like you constructed the encoder cell above)</span>
     <span class="k">def</span> <span class="nf">rnn_cell</span><span class="p">():</span>
         <span class="n">cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">LSTMCell</span><span class="p">(</span><span class="n">rnn_size</span><span class="p">)</span>
         <span class="c1">#  initializer=tf.random_uniform_initializer(-0.1, 0.1, seed=2)</span>
         <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">DropoutWrapper</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">output_keep_prob</span><span class="o">=</span><span class="n">keep_prob</span><span class="p">)</span>
     <span class="n">cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">MultiRNNCell</span><span class="p">([</span><span class="n">rnn_cell</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">)],</span> <span class="n">state_is_tuple</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    
+
     <span class="c1"># Create an output layer to map the outputs of the decoder to the elements of </span>
     <span class="c1"># our vocabulary</span>
     <span class="n">output_layer</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="n">target_vocab_size</span><span class="p">)</span>
@@ -12553,34 +12552,31 @@ Tests Passed
     <span class="c1"># Use the decoding_layer_train() function to get the training logits.</span>
     <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">variable_scope</span><span class="p">(</span><span class="s1">&#39;decode&#39;</span><span class="p">):</span>
         <span class="n">training_decoder_output</span> <span class="o">=</span> <span class="n">decoding_layer_train</span><span class="p">(</span>
-            <span class="n">encoder_state</span><span class="p">,</span> 
-            <span class="n">cell</span><span class="p">,</span> 
+            <span class="n">encoder_state</span><span class="p">,</span>
+            <span class="n">cell</span><span class="p">,</span>
             <span class="c1"># NOTE(kaneda): We pass embed_input, not embedding</span>
             <span class="n">embed_input</span><span class="p">,</span>
             <span class="n">target_sequence_length</span><span class="p">,</span>
-            <span class="n">max_target_sequence_length</span><span class="p">,</span> 
-            <span class="n">output_layer</span><span class="p">,</span> 
-            <span class="n">keep_prob</span><span class="p">)</span>    
-    
+            <span class="n">max_target_sequence_length</span><span class="p">,</span>
+            <span class="n">output_layer</span><span class="p">,</span>
+            <span class="n">keep_prob</span><span class="p">)</span>
+
     <span class="c1"># Use the decoding_layer_infer() function to get the inference logits.</span>
     <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">variable_scope</span><span class="p">(</span><span class="s1">&#39;decode&#39;</span><span class="p">,</span> <span class="n">reuse</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">inference_decoder_output</span> <span class="o">=</span> <span class="n">decoding_layer_infer</span><span class="p">(</span>
-            <span class="n">encoder_state</span><span class="p">,</span> 
-            <span class="n">cell</span><span class="p">,</span> 
+            <span class="n">encoder_state</span><span class="p">,</span>
+            <span class="n">cell</span><span class="p">,</span>
             <span class="c1"># NOTE(kaneda): We pass embedding, not embed_input.        </span>
             <span class="n">embedding</span><span class="p">,</span>
             <span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;GO&gt;&#39;</span><span class="p">],</span>
             <span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;EOS&gt;&#39;</span><span class="p">],</span>
-            <span class="n">max_target_sequence_length</span><span class="p">,</span> 
-            <span class="n">target_vocab_size</span><span class="p">,</span> 
+            <span class="n">max_target_sequence_length</span><span class="p">,</span>
+            <span class="n">target_vocab_size</span><span class="p">,</span>
             <span class="n">output_layer</span><span class="p">,</span>
-            <span class="n">batch_size</span><span class="p">,</span> 
-            <span class="n">keep_prob</span><span class="p">)</span>  
-        
-    <span class="k">return</span> <span class="n">training_decoder_output</span><span class="p">,</span> <span class="n">inference_decoder_output</span>
+            <span class="n">batch_size</span><span class="p">,</span>
+            <span class="n">keep_prob</span><span class="p">)</span>
 
-<span class="c1"># TODO(kaneda): Ignoring this test failure since the shape looks correct. The actual is</span>
-<span class="c1"># (64, ?, 2) while the expected is (64, None, 2).</span>
+    <span class="k">return</span> <span class="n">training_decoder_output</span><span class="p">,</span> <span class="n">inference_decoder_output</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE</span>
@@ -12599,23 +12595,9 @@ Tests Passed
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AssertionError</span>                            Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-69-190ba3013c9d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     71</span> DON<span class="ansi-red-fg">&#39;</span>T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE
-<span class="ansi-green-intense-fg ansi-bold">     72</span> &#34;&#34;&#34;
-<span class="ansi-green-fg">---&gt; 73</span><span class="ansi-red-fg"> </span>tests<span class="ansi-blue-fg">.</span>test_decoding_layer<span class="ansi-blue-fg">(</span>decoding_layer<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/home/carnd/deep-learning/language-translation/problem_unittests.py</span> in <span class="ansi-cyan-fg">test_decoding_layer</span><span class="ansi-blue-fg">(decoding_layer)</span>
-<span class="ansi-green-intense-fg ansi-bold">    195</span> 
-<span class="ansi-green-intense-fg ansi-bold">    196</span>         <span class="ansi-green-fg">assert</span> train_decoder_output<span class="ansi-blue-fg">.</span>rnn_output<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>as_list<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">[</span>batch_size<span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> vocab_size<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span><span class="ansi-red-fg"> </span><span class="ansi-red-fg">\</span>
-<span class="ansi-green-fg">--&gt; 197</span><span class="ansi-red-fg">             </span><span class="ansi-blue-fg">&#39;Wrong shape returned.  Found {}&#39;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>train_decoder_output<span class="ansi-blue-fg">.</span>rnn_output<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    198</span>         <span class="ansi-green-fg">assert</span> infer_logits_output<span class="ansi-blue-fg">.</span>sample_id<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>as_list<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">[</span>batch_size<span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span><span class="ansi-red-fg"> </span><span class="ansi-red-fg">\</span>
-<span class="ansi-green-intense-fg ansi-bold">    199</span>              <span class="ansi-blue-fg">&#39;Wrong shape returned.  Found {}&#39;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>infer_logits_output<span class="ansi-blue-fg">.</span>sample_id<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">AssertionError</span>: Wrong shape returned.  Found (64, ?, 2)</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tests Passed
+</pre>
 </div>
 </div>
 
@@ -12640,7 +12622,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">seq2seq_model</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">target_data</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span>
@@ -12668,29 +12650,29 @@ Tests Passed
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Encode the input using your encoding_layer().</span>
     <span class="n">enc_state</span> <span class="o">=</span> <span class="n">encoding_layer</span><span class="p">(</span>
-        <span class="n">input_data</span><span class="p">,</span> 
-        <span class="n">rnn_size</span><span class="p">,</span> 
-        <span class="n">num_layers</span><span class="p">,</span> 
-        <span class="n">keep_prob</span><span class="p">,</span>  
-        <span class="n">source_sequence_length</span><span class="p">,</span> 
-        <span class="n">source_vocab_size</span><span class="p">,</span> 
+        <span class="n">input_data</span><span class="p">,</span>
+        <span class="n">rnn_size</span><span class="p">,</span>
+        <span class="n">num_layers</span><span class="p">,</span>
+        <span class="n">keep_prob</span><span class="p">,</span>
+        <span class="n">source_sequence_length</span><span class="p">,</span>
+        <span class="n">source_vocab_size</span><span class="p">,</span>
         <span class="n">enc_embedding_size</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-    
+
     <span class="c1"># Process target data using your process_decoder_input()</span>
     <span class="n">dec_input</span> <span class="o">=</span> <span class="n">process_decoder_input</span><span class="p">(</span><span class="n">target_data</span><span class="p">,</span> <span class="n">target_vocab_to_int</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>
-    
+
     <span class="c1"># Decode the encoded input using your decoding_layer().</span>
     <span class="n">training_decoder_output</span><span class="p">,</span> <span class="n">inference_decoder_output</span> <span class="o">=</span> <span class="n">decoding_layer</span><span class="p">(</span>
-        <span class="n">dec_input</span><span class="p">,</span> 
-        <span class="n">enc_state</span><span class="p">,</span> 
-        <span class="n">target_sequence_length</span><span class="p">,</span> 
-        <span class="n">max_target_sentence_length</span><span class="p">,</span> 
-        <span class="n">rnn_size</span><span class="p">,</span> 
-        <span class="n">num_layers</span><span class="p">,</span> 
-        <span class="n">target_vocab_to_int</span><span class="p">,</span> 
-        <span class="n">target_vocab_size</span><span class="p">,</span> 
-        <span class="n">batch_size</span><span class="p">,</span> 
-        <span class="n">keep_prob</span><span class="p">,</span> 
+        <span class="n">dec_input</span><span class="p">,</span>
+        <span class="n">enc_state</span><span class="p">,</span>
+        <span class="n">target_sequence_length</span><span class="p">,</span>
+        <span class="n">max_target_sentence_length</span><span class="p">,</span>
+        <span class="n">rnn_size</span><span class="p">,</span>
+        <span class="n">num_layers</span><span class="p">,</span>
+        <span class="n">target_vocab_to_int</span><span class="p">,</span>
+        <span class="n">target_vocab_size</span><span class="p">,</span>
+        <span class="n">batch_size</span><span class="p">,</span>
+        <span class="n">keep_prob</span><span class="p">,</span>
         <span class="n">dec_embedding_size</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">training_decoder_output</span><span class="p">,</span> <span class="n">inference_decoder_output</span>
@@ -12713,23 +12695,9 @@ Tests Passed
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AssertionError</span>                            Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-70-6ceeedd52fca&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     55</span> DON<span class="ansi-red-fg">&#39;</span>T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE
-<span class="ansi-green-intense-fg ansi-bold">     56</span> &#34;&#34;&#34;
-<span class="ansi-green-fg">---&gt; 57</span><span class="ansi-red-fg"> </span>tests<span class="ansi-blue-fg">.</span>test_seq2seq_model<span class="ansi-blue-fg">(</span>seq2seq_model<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/home/carnd/deep-learning/language-translation/problem_unittests.py</span> in <span class="ansi-cyan-fg">test_seq2seq_model</span><span class="ansi-blue-fg">(seq2seq_model)</span>
-<span class="ansi-green-intense-fg ansi-bold">    254</span> 
-<span class="ansi-green-intense-fg ansi-bold">    255</span>         <span class="ansi-green-fg">assert</span> train_decoder_output<span class="ansi-blue-fg">.</span>rnn_output<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>as_list<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">[</span>batch_size<span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> vocab_size<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span><span class="ansi-red-fg"> </span><span class="ansi-red-fg">\</span>
-<span class="ansi-green-fg">--&gt; 256</span><span class="ansi-red-fg">             </span><span class="ansi-blue-fg">&#39;Wrong shape returned.  Found {}&#39;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>train_decoder_output<span class="ansi-blue-fg">.</span>rnn_output<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    257</span>         <span class="ansi-green-fg">assert</span> infer_logits_output<span class="ansi-blue-fg">.</span>sample_id<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>as_list<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">[</span>batch_size<span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span><span class="ansi-red-fg"> </span><span class="ansi-red-fg">\</span>
-<span class="ansi-green-intense-fg ansi-bold">    258</span>              <span class="ansi-blue-fg">&#39;Wrong shape returned.  Found {}&#39;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>infer_logits_output<span class="ansi-blue-fg">.</span>sample_id<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">AssertionError</span>: Wrong shape returned.  Found (64, ?, 2)</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tests Passed
+</pre>
 </div>
 </div>
 
@@ -12956,7 +12924,7 @@ Tests Passed
                                                                                                              <span class="n">valid_target</span><span class="p">,</span>
                                                                                                              <span class="n">batch_size</span><span class="p">,</span>
                                                                                                              <span class="n">source_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;PAD&gt;&#39;</span><span class="p">],</span>
-                                                                                                             <span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;PAD&gt;&#39;</span><span class="p">]))</span>                                                                                                  
+                                                                                                             <span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;PAD&gt;&#39;</span><span class="p">]))</span>
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">(</span><span class="n">graph</span><span class="o">=</span><span class="n">train_graph</span><span class="p">)</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
     <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span>
 
@@ -13445,7 +13413,7 @@ Prediction
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span>
 </pre></div>
 
 </div>
@@ -13457,7 +13425,7 @@ Prediction
   </div>
 </body>
 
- 
+
 
 
 </html>
